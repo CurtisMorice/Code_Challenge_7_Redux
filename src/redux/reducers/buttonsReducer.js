@@ -2,10 +2,11 @@ import { combineReducers } from 'redux';
 
 //WRITE REDUCERS HERE
 
+let defaultState = ['Curtis'];
 
-const passengerReducer = (state = [], action) => {
+const passengerReducer = (state = defaultState, action) => {
 if(action.type === 'ADD_PASSENGER'){
-  return {...state, passenger: action.payload};
+  return [...state, action.payload];
 }
 return state
 }

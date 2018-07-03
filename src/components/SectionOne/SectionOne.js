@@ -17,9 +17,9 @@ class SectionOne extends Component {
       <div>
         <h2>Speed Control</h2>
         
-        <p><SectionThree /></p>
-        <button onClick={() => this.props.dispatch({type: 'INCREASE_SPEED'})}>Increase Speed</button>
         
+        <button onClick={() => this.props.dispatch({type: 'INCREASE_SPEED'})}>Increase Speed</button>
+        <p>{this.props.reduxStore.speedReducer}</p>
         <button onClick={() => this.props.dispatch({type: 'DECREASE_SPEED'})}>Decrease Speed</button>
       </div>
     )
